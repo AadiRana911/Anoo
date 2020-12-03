@@ -24,7 +24,7 @@ const App = () => {
       <Text style = {{fontFamily: Fonts.OSBi}}>Hello World</Text>
       <Text style = {{fontFamily: Fonts.OSeB}}>Hello World</Text>
       <Text style = {{fontFamily: Fonts.OSeBi}}>Hello World</Text>
-      <Text style = {{fontFamily: Fonts.OSI}}>Hello World</Text>
+      <Text style = {{fontFamily: Fonts.OSI}}>World</Text>
       <Text style = {{fontFamily: Fonts.OSL}}>Hello World</Text>
       <Text style = {{fontFamily: Fonts.OSLi}}>Hello World</Text>
       <Text style = {{fontFamily: Fonts.OSR}}>Hello World</Text>
