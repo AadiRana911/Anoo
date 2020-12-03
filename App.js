@@ -8,20 +8,25 @@
  */
 
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-} from 'react-native';
-import {Fonts} from './src/utils/Fonts'
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+
+import { View, Text } from 'react-native';
+import {Fonts} from './src/utils/Fonts';
+
+import Splash from './src/screens/Splash';
+import Home from './src/screens/Home';
+
+const Stack = createStackNavigator();
+
 const App = () => {
   return (
-    <View style = {{alignItems: 'center', justifyContent: 'center'}}>
-      <Text style = {{fontFamily: Fonts.OSL}}>Hello World</Text>
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Splash" component={Splash} options = {{headerShown: false}} />
+        <Stack.Screen name="Home" component={Home} options = {{headerShown: false}} />
+      </Stack.Navigator>
+    </NavigationContainer>
 
   );
 };
