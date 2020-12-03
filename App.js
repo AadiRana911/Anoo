@@ -11,7 +11,7 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import { View, Text } from 'react-native';
+
 import {Fonts} from './src/utils/Fonts';
 
 import Splash from './src/screens/Splash';
@@ -27,7 +27,6 @@ const App = () => {
         <Stack.Screen name="Home" component={Home} options = {{headerShown: false}} />
       </Stack.Navigator>
     </NavigationContainer>
-
   );
 };
 
