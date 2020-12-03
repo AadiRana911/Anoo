@@ -8,30 +8,25 @@
  */
 
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-} from 'react-native';
-import {Fonts} from './src/utils/Fonts'
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+
+
+import {Fonts} from './src/utils/Fonts';
+
+import Splash from './src/screens/Splash';
+import Home from './src/screens/Home';
+
+const Stack = createStackNavigator();
+
 const App = () => {
   return (
-    <View style = {{alignItems: 'center', justifyContent: 'center'}}>
-      <Text style = {{fontFamily: Fonts.OSB}}>Hello World</Text>
-      <Text style = {{fontFamily: Fonts.OSBi}}>Hello World</Text>
-      <Text style = {{fontFamily: Fonts.OSeB}}>Hello World</Text>
-      <Text style = {{fontFamily: Fonts.OSeBi}}>Hello World</Text>
-      <Text style = {{fontFamily: Fonts.OSI}}>World</Text>
-      <Text style = {{fontFamily: Fonts.OSL}}>Hello World</Text>
-      <Text style = {{fontFamily: Fonts.OSLi}}>Hello World</Text>
-      <Text style = {{fontFamily: Fonts.OSR}}>Hello World</Text>
-      <Text style = {{fontFamily: Fonts.OSsB}}>Hello World</Text>
-      <Text style = {{fontFamily: Fonts.OSsBi}}>Hello World</Text>
-    </View>
-
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Splash" component={Splash} options = {{headerShown: false}} />
+        <Stack.Screen name="Home" component={Home} options = {{headerShown: false}} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
 
