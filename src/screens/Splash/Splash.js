@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import React, {useEffect} from 'react'
 import { View, Text, Dimensions, Image } from 'react-native'
 
@@ -14,10 +13,10 @@ const Splash = ({navigation}) => {
             //   if(email === 'asadimtiaz711@gmail.com'){
                 navigation.navigate('Home')
             //   }else{
-                // navigation.navigate('Tabs');
+            //     navigation.navigate('Tabs');
             //   }
             // } else{
-                // navigation.navigate('Login');
+            //     navigation.navigate('Login');
             // }
           },
           2000,
