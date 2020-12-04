@@ -12,7 +12,7 @@ const Splash = ({navigation}) => {
             // const email = await AsyncStorage.getItem('email')
             // if(isLoggedIn === 'true'){
             //   if(email === 'asadimtiaz711@gmail.com'){
-                navigation.navigate('Home')
+                navigation.navigate('Topic')
             //   }else{
                 // navigation.navigate('Tabs');
             //   }
