@@ -11,7 +11,7 @@ const Login = ({navigation}) => {
     const [password, setPassword] = useState('');
 
     return(
-        <View style={{flex: 1, }}>
+        <View style={{flex: 1, backgroundColor: 'white'}}>
             <View style={{flex: 1, paddingHorizontal: 20,}}>
             <View style={{ justifyContent: 'center', alignItems: 'center', backgroundColor: 'white', paddingVertical: 40}}>
             <Text style={{fontFamily: Fonts.OSB, fontSize: 20,}}>Welcome back to Anoo</Text>
@@ -20,11 +20,11 @@ const Login = ({navigation}) => {
             <View style={{padding: 10,
             borderBottomColor: 'lightgrey',
             backgroundColor: 'rgba(0,150,0,0.15)',
-            borderRadius:10,
+            borderRadius:15,
             borderBottomWidth: 1,
             width:'100%',
             alignSelf: 'center',
-            height:55,
+            height:60,
             marginBottom:20,
             flexDirection: 'row',
             alignItems:'center'}}>
@@ -46,11 +46,11 @@ const Login = ({navigation}) => {
             <View style={{padding: 10,
             borderBottomColor: 'lightgrey',
             backgroundColor: 'rgba(0,150,0,0.15)',
-            borderRadius:10,
+            borderRadius:15,
             borderBottomWidth: 1,
             width:'100%',
             alignSelf: 'center',
-            height:55,
+            height:60,
             marginBottom:20,
             flexDirection: 'row',
             alignItems:'center'}}>
@@ -67,7 +67,7 @@ const Login = ({navigation}) => {
                 />
             </View>
    
-            <TouchableOpacity onPress={() => navigation.navigate('Topic')} style={{width: '100%',alignSelf: 'center',height: 50,justifyContent: 'center' ,alignItems: "center",backgroundColor: colors.primary,padding: 10,borderRadius: 7}} onPress={() => navigation.navigate('Industry', {email: email})}>
+            <TouchableOpacity style={{width: '100%',alignSelf: 'center',height: 50,justifyContent: 'center' ,alignItems: "center",backgroundColor: colors.primary,padding: 10,borderRadius: 7}} onPress={() => navigation.navigate('Topic')}>
             <Text style={{fontFamily: Fonts.OSeB, color: 'white', fontSize: 20}}>L O G I N</Text>
             </TouchableOpacity>
             

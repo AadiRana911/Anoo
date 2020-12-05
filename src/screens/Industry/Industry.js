@@ -65,9 +65,9 @@ const Industry = () => {
         
     }
     return(
-        <ScrollView style = {{flex: 1, backgroundColor: 'white'}}>
+        <ScrollView style = {{flex: 1, backgroundColor: 'white'}} contentContainerStyle = {{flexGrow: 1}}>
             <View style={{padding: '10%', justifyContent: 'center', alignItems: 'center', backgroundColor: 'white'}}>
-            <Text style={{fontFamily: Fonts.OSB, fontSize: 20,padding: 1.5,}}>Pick relevent industries</Text>
+            <Text style={{fontFamily: Fonts.OSB, fontSize: 20,padding: 1.5,}}>Pick relevant industries</Text>
             <Text style={{fontFamily: Fonts.OSL, fontSize: 15, padding: 1.5,}}>Choose 3 or more to get the best options.</Text>
             </View>
             <FlatList
@@ -84,7 +84,7 @@ const Industry = () => {
                     )
                 }}
             />
-        <View style={{paddingTop: '40%'}}>
+        <View style={{position: 'absolute', left: 0, right: 0, bottom: 0}}>
         <Button title= "Next" color = {colors.primary} />
         </View>
         </ScrollView>

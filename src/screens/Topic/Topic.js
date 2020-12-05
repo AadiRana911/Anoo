@@ -104,7 +104,7 @@ const Topic = ({navigation}) => {
             </View>
             <FlatList 
                 data = {cards}
-                style = {{flex: 1, backgroundColor: 'white'}}
+                style = {{flex: 1, backgroundColor: 'white', marginBottom: 40}}
                 contentContainerStyle = {{flexGrow: 1, alignItems: 'center'}}
                 keyExtractor = {(item, index) => index.toString()}
                 horizontal = {false}
@@ -115,7 +115,7 @@ const Topic = ({navigation}) => {
                     )
                 }}
             />
-            <View>
+            <View style = {{position: 'absolute', left: 0, right: 0, bottom: 0}}>
                 <Button title= "Next" color = {colors.primary} onPress={() => navigation.navigate('Industry')} />
             </View>
         </View>
