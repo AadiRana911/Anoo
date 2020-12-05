@@ -1,13 +1,15 @@
 /* eslint-disable prettier/prettier */
 import React, {useState} from 'react'
-import { View, Text, Dimensions, ScrollView, TouchableOpacity, Button } from 'react-native'
+import { View, Text, Dimensions, ScrollView, TouchableOpacity, Button, FlatList } from 'react-native'
 import { Header } from 'react-native/Libraries/NewAppScreen';
+import {colors} from '../../theme'
 
 import {Fonts} from '../../utils/Fonts';
 import Card from '../../components/Card/Card';
 
 const Topic = ({navigation}) => {
     const {height, width} = Dimensions.get('window');
+    const [selected, setSelected] = useState([]);
     const [cards, setCards] = useState([
         {
             name: 'Software Engineering',
@@ -26,47 +28,47 @@ const Topic = ({navigation}) => {
             color: 'red',
         },
         {
-            name: 'Software Engineering',
+            name: 'Security',
             color: 'red',
         },
         {
-            name: 'Software Engineering',
+            name: 'Product Management',
             color: 'red',
         },
         {
-            name: 'Software Engineering',
+            name: 'Communications',
             color: 'red',
         },
         {
-            name: 'Software Engineering',
+            name: 'Business Development',
             color: 'red',
         },
         {
-            name: 'Software Engineering',
+            name: 'Operations',
             color: 'red',
         },
         {
-            name: 'Software Engineering',
+            name: 'Supply Chain',
             color: 'red',
         },
         {
-            name: 'Software Engineering',
+            name: 'Customer Service',
             color: 'red',
         },
         {
-            name: 'Software Engineering',
+            name: 'Human Resources',
             color: 'red',
         },
         {
-            name: 'Software Engineering',
+            name: 'Legal',
             color: 'red',
         },
         {
-            name: 'Software Engineering',
+            name: 'Admin',
             color: 'red',
         },
         {
-            name: 'Software Engineering',
+            name: 'Corporate Finance',
             color: 'red',
         },
         {
@@ -83,46 +85,38 @@ const Topic = ({navigation}) => {
         },
         
     ])
+    const RenderFlatList = ({text, color}) => {
+        const [isPressed, setIsPressed] = useState(false)
+        return(
+            <Card h = {height/7.9} w = {(width/3.2 )-10} backgroundColor = {isPressed === true ? color : 'rgba(236,236,236,0.69)'} styles = {{marginHorizontal: 10, marginVertical: 8}} text = {text} onPress = {() => {
+                setIsPressed(!isPressed);
+                var temp = selected;
+                temp.push(text);
+                setSelected(temp);
+            }}/>
+        )   
+    }
     return(
         <View style = {{flex: 1}}>
             <View style={{padding: '10%', justifyContent: 'center', alignItems: 'center', backgroundColor: 'white'}}>
             <Text style={{fontFamily: Fonts.OSB, fontSize: 20,padding: 1.5,}}>Choose your fields of interest</Text>
             <Text style={{fontFamily: Fonts.OSL, fontSize: 15, padding: 1.5,}}>This will help customize your feed.</Text>
             </View>
-            <ScrollView style={{flex: 1}} contentContainerStyle = {{flexGrow: 1}}>
-            <View style = {{ flexDirection: 'row', margin: 3, justifyContent: 'space-evenly'}}>
-                <Card h = {height/7.9} w = {(width/3.2 )-8} text = {'Software Engineering +'}/>
-                <Card h = {height/7.9} w = {(width/3.2 )-8} text = {'Hardware Engineering +'}/>
-                <Card h = {height/7.9} w = {(width/3.2 )-8} text = {'Data Science & Analytics +'}/>
-                </View>
-            <View style = {{ flexDirection: 'row', margin: 5.1, justifyContent: 'space-evenly'}}>
-                <Card h = {height/7.9} w = {(width/3.2 )-8} text = {'Information Technology +'}/>
-                <Card h = {height/7.9} w = {(width/3.2 )-8} text = {'Security +'}/>
-                <Card h = {height/7.9} w = {(width/3.2 )-8} text = {'Product Management +'}/>
-                </View>
-            <View style = {{ flexDirection: 'row', margin: 5.1, justifyContent: 'space-evenly'}}>
-                <Card h = {height/7.9} w = {(width/3.2 )-8} text = {'Communications +'}/>
-                <Card h = {height/7.9} w = {(width/3.2 )-8} text = {'Business Development +'}/>
-                <Card h = {height/7.9} w = {(width/3.2 )-8} text = {'Operations +'}/>
-                </View>
-            <View style = {{ flexDirection: 'row', margin: 5.1, justifyContent: 'space-evenly'}}>
-                <Card h = {height/7.9} w = {(width/3.2 )-8} text = {'Supply Chain +'}/>
-                <Card h = {height/7.9} w = {(width/3.2 )-8} text = {'Customer Service +'}/>
-                <Card h = {height/7.9} w = {(width/3.2 )-8} text = {'Human Resources +'}/>
-                </View>
-            <View style = {{ flexDirection: 'row', margin: 5.1, justifyContent: 'space-evenly'}}>
-                <Card h = {height/7.9} w = {(width/3.2 )-8} text = {'Legal +'}/>
-                <Card h = {height/7.9} w = {(width/3.2 )-8} text = {'Admin +'}/>
-                <Card h = {height/7.9} w = {(width/3.2 )-8} text = {'Corporate Finance +'}/>
-                </View>
-            <View style = {{ flexDirection: 'row', margin: 5.1, justifyContent: 'space-evenly'}}>
-                <Card h = {height/7.9} w = {(width/3.2 )-8} text = {'Legal +'}/>
-                <Card h = {height/7.9} w = {(width/3.2 )-8} text = {'Admin +'}/>
-                <Card h = {height/7.9} w = {(width/3.2 )-8} text = {'Corporate Finance +'}/>
-                </View>
-            </ScrollView>
+            <FlatList 
+                data = {cards}
+                style = {{flex: 1, backgroundColor: 'white'}}
+                contentContainerStyle = {{flexGrow: 1, alignItems: 'center'}}
+                keyExtractor = {(item, index) => index.toString()}
+                horizontal = {false}
+                numColumns = {3}
+                renderItem = {({item}) => {
+                    return(
+                        <RenderFlatList text = {item.name} color = {item.color} />
+                    )
+                }}
+            />
             <View>
-                <Button title= "Next" color = '#8fbc8f' onPress={() => navigation.navigate('Industry')} />
+                <Button title= "Next" color = {colors.primary} onPress={() => navigation.navigate('Industry')} />
             </View>
         </View>
         

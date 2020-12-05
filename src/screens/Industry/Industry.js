@@ -9,6 +9,7 @@ import {colors} from '../../theme'
 
 const Industry = () => {
     const {height, width} = Dimensions.get('window');
+    const [selected, setSelected] = useState([]);
     const [cards, setCards] = useState([
         {
             name: 'Tech',
@@ -54,8 +55,11 @@ const Industry = () => {
     const RenderFlatList = ({text, color}) => {
         const [isPressed, setIsPressed] = useState(false)
         return(
-            <Card h = {height/7.9} w = {(width/3.2 )-10} backgroundColor = {isPressed === true ? color : 'rgba(236,236,236,0.69)'} styles = {{marginHorizontal: 10, marginVertical: 8}} text = {text} onPress = {() => {
-                setIsPressed(!isPressed)
+            <Card h = {height/7.9} w = {(width/3.2 )-10} backgroundColor = {isPressed === true ? color : 'rgba(236,236,236,0.69)'} styles = {{margin: 10}} text = {text} onPress = {() => {
+                setIsPressed(!isPressed);
+                var temp = selected;
+                temp.push(text);
+                setSelected(temp);
             }}/>
         )
         
@@ -72,7 +76,7 @@ const Industry = () => {
                 horizontal = {false}
                 style = {{backgroundColor: 'white'}}
                 numColumns = {3}
-                contentContainerStyle = {{justifyContent: 'space-between'}}
+                contentContainerStyle = {{alignItems: 'center'}}
                 renderItem = {({item, index}) => {
                     console.log(item)
                     return(
