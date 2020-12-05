@@ -15,15 +15,20 @@ import {Fonts} from './src/utils/Fonts';
 
 import Splash from './src/screens/Splash';
 import Home from './src/screens/Home';
+import Topic from './src/screens/Topic'
+import Industry from './src/screens/Industry';
 
 const Stack = createStackNavigator();
 
 const App = () => {
   return (
+    // <Industry />
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Splash" component={Splash} options = {{headerShown: false}} />
-        <Stack.Screen name="Home" component={Home} options = {{headerShown: false}} />
+        {/* <Stack.Screen name="Home" component={Home} options = {{headerShown: false}} /> */}
+        <Stack.Screen name="Topic" component={Topic} options = {{headerShown: false}} />
+        <Stack.Screen name="Industry" component={Industry} options = {{headerShown: false}} />
       </Stack.Navigator>
     </NavigationContainer>
   );
