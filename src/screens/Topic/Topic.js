@@ -13,75 +13,75 @@ const Topic = ({navigation}) => {
     const [cards, setCards] = useState([
         {
             name: 'Software Engineering',
-            color: 'tomato',
+            color: 'pink',
         },
         {
             name: 'Hardware Engineering',
-            color: 'red',
+            color: 'thistle',
         },
         {
             name: 'Data Science & Analytics',
-            color: 'red',
+            color: 'aquamarine',
         },
         {
             name: 'Information Technology',
-            color: 'red',
+            color: 'lightgrey',
         },
         {
             name: 'Security',
-            color: 'red',
+            color: 'plum',
         },
         {
             name: 'Product Management',
-            color: 'red',
+            color: 'lightblue',
         },
         {
             name: 'Communications',
-            color: 'red',
+            color: 'lemonchiffon',
         },
         {
             name: 'Business Development',
-            color: 'red',
+            color: 'salmon',
         },
         {
             name: 'Operations',
-            color: 'red',
+            color: 'mistyrose',
         },
         {
             name: 'Supply Chain',
-            color: 'red',
+            color: 'aquamarine',
         },
         {
             name: 'Customer Service',
-            color: 'red',
+            color: 'thistle',
         },
         {
             name: 'Human Resources',
-            color: 'red',
+            color: 'lightgrey',
         },
         {
             name: 'Legal',
-            color: 'red',
+            color: 'lightblue',
         },
         {
             name: 'Admin',
-            color: 'red',
+            color: 'pink',
         },
         {
             name: 'Corporate Finance',
-            color: 'red',
+            color: 'plum',
         },
         {
             name: 'Software Engineering',
-            color: 'red',
+            color: 'lemonchiffon',
         },
         {
             name: 'Software Engineering',
-            color: 'red',
+            color: 'salmon',
         },
         {
             name: 'Software Engineering',
-            color: 'red',
+            color: 'wheat',
         },
         
     ])

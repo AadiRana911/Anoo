@@ -17,18 +17,23 @@ import Splash from './src/screens/Splash';
 import Home from './src/screens/Home';
 import Topic from './src/screens/Topic'
 import Industry from './src/screens/Industry';
+import SignUp from './src/screens/SignUp';
+import Login from './src/screens/Login';
 
 const Stack = createStackNavigator();
 
 const App = () => {
   return (
-    // <Industry />
+    
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Splash" component={Splash} options = {{headerShown: false}} />
         {/* <Stack.Screen name="Home" component={Home} options = {{headerShown: false}} /> */}
         <Stack.Screen name="Topic" component={Topic} options = {{headerShown: false}} />
         <Stack.Screen name="Industry" component={Industry} options = {{headerShown: false}} />
+        <Stack.Screen name="SignUp" component={SignUp} options = {{headerShown: false}} />
+        <Stack.Screen name="Login" component={Login} options = {{headerShown: false}} />
+
       </Stack.Navigator>
     </NavigationContainer>
   );
