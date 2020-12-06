@@ -28,7 +28,7 @@ const App = () => {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Splash" component={Splash} options = {{headerShown: false}} />
-        {/* <Stack.Screen name="Home" component={Home} options = {{headerShown: false}} /> */}
+        <Stack.Screen name="Home" component={Home} options = {{headerShown: false}} />
         <Stack.Screen name="Topic" component={Topic} options = {{headerShown: false}} />
         <Stack.Screen name="Industry" component={Industry} options = {{headerShown: false}} />
         <Stack.Screen name="SignUp" component={SignUp} options = {{headerShown: false}} />

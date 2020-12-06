@@ -10,7 +10,7 @@ const SignUp = ({navigation}) => {
     const [email, setEmail] = useState('');
 
     return(
-        <View style={{flex: 1, }}>
+        <View style={{flex: 1, backgroundColor: 'white'}}>
             <View style={{flex: 1, paddingHorizontal: 20,}}>
             <View style={{ justifyContent: 'center', alignItems: 'center', backgroundColor: 'white', paddingVertical: 40}}>
             <Text style={{fontFamily: Fonts.OSB, fontSize: 20,}}>Create your account</Text>
@@ -48,7 +48,7 @@ const SignUp = ({navigation}) => {
             />
             </View>
    
-            <TouchableOpacity style={{width: '100%',alignSelf: 'center',height: 50,justifyContent: 'center' ,alignItems: "center",backgroundColor: colors.primary,padding: 10,borderRadius: 7}} onPress={() => navigation.navigate('Industry', {email: email})}>
+            <TouchableOpacity style={{width: '100%',alignSelf: 'center',height: 50,justifyContent: 'center' ,alignItems: "center",backgroundColor: colors.primary,padding: 10,borderRadius: 7}} onPress={() => navigation.navigate('Topic')}>
             <Text style={{fontFamily: Fonts.OSeB, color: 'white', fontSize: 20}}>V E R I F Y</Text>
             </TouchableOpacity>
             

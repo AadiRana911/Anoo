@@ -67,7 +67,7 @@ const Login = ({navigation}) => {
                 />
             </View>
    
-            <TouchableOpacity style={{width: '100%',alignSelf: 'center',height: 50,justifyContent: 'center' ,alignItems: "center",backgroundColor: colors.primary,padding: 10,borderRadius: 7}} onPress={() => navigation.navigate('Topic')}>
+            <TouchableOpacity style={{width: '100%',alignSelf: 'center',height: 50,justifyContent: 'center' ,alignItems: "center",backgroundColor: colors.primary,padding: 10,borderRadius: 7}} onPress={() => navigation.navigate('Home')}>
             <Text style={{fontFamily: Fonts.OSeB, color: 'white', fontSize: 20}}>L O G I N</Text>
             </TouchableOpacity>
             

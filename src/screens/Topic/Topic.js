@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import { View, Text, Dimensions, ScrollView, TouchableOpacity, Button, FlatList } from 'react-native'
 import { Header } from 'react-native/Libraries/NewAppScreen';
 import {colors} from '../../theme'
@@ -85,14 +85,20 @@ const Topic = ({navigation}) => {
         },
         
     ])
+    useEffect(() => {
+        console.log(selected.length)
+    }, [selected])
     const RenderFlatList = ({text, color}) => {
         const [isPressed, setIsPressed] = useState(false)
         return(
             <Card h = {height/7.9} w = {(width/3.2 )-10} backgroundColor = {isPressed === true ? color : 'rgba(236,236,236,0.69)'} styles = {{marginHorizontal: 10, marginVertical: 8}} text = {text} onPress = {() => {
                 setIsPressed(!isPressed);
                 var temp = selected;
-                temp.push(text);
+                if(!temp.includes(text)){
+                    temp.push(text);
+                }
                 setSelected(temp);
+                console.log(selected.length)
             }}/>
         )   
     }
@@ -110,13 +116,17 @@ const Topic = ({navigation}) => {
                 horizontal = {false}
                 numColumns = {3}
                 renderItem = {({item}) => {
+                    console.log(selected.length)
                     return(
                         <RenderFlatList text = {item.name} color = {item.color} />
                     )
                 }}
             />
             <View style = {{position: 'absolute', left: 0, right: 0, bottom: 0}}>
-                <Button title= "Next" color = {colors.primary} onPress={() => navigation.navigate('Industry')} />
+                <Button title= "Next" color = {colors.primary} onPress={() => {
+                    if (selected.length > 0)
+                        navigation.navigate('Industry')
+                }} />
             </View>
         </View>
         
