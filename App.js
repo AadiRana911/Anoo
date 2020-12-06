@@ -10,16 +10,25 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
+import Entypo from 'react-native-vector-icons/Entypo'
+import EvilIcons from 'react-native-vector-icons/EvilIcons'
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
+import Foundation from 'react-native-vector-icons/Foundation'
+import AntDesign from 'react-native-vector-icons/AntDesign'
 
 import {Fonts} from './src/utils/Fonts';
-
+import {colors} from './src/theme'
 import Splash from './src/screens/Splash';
 import Home from './src/screens/Home';
 import Topic from './src/screens/Topic'
 import Industry from './src/screens/Industry';
-
+import EmailVerify from './src/screens/EmailVerify'
+import PhoneVerify from './src/screens/PhoneVerify'
+import Login from './src/screens/Login'
 const Stack = createStackNavigator();
+const Tab = createBottomTabNavigator();
 
 const App = () => {
   return (
@@ -30,10 +39,64 @@ const App = () => {
         {/* <Stack.Screen name="Home" component={Home} options = {{headerShown: false}} /> */}
         <Stack.Screen name="Topic" component={Topic} options = {{headerShown: false}} />
         <Stack.Screen name="Industry" component={Industry} options = {{headerShown: false}} />
+        <Stack.Screen name="Tabs" component={Tabs} options = {{headerShown: false}} />
       </Stack.Navigator>
     </NavigationContainer>
   );
 };
 
+const EmailStack = () => {
+  return (
+      <Stack.Navigator initialRouteName="EmailVerify">
+          <Stack.Screen name="EmailVerify" component={EmailVerify} options = {{headerShown: false}} />
+          {/* <Stack.Screen name="Exercises" component={Exercises} options = {{headerShown: false}} />
+          <Stack.Screen name="WorkoutPlay" component={WorkoutPlay} options = {{headerShown: false}} /> */}
+      </Stack.Navigator>
+  )
+}
+const PhoneStack = () => {
+return (
+    <Stack.Navigator initialRouteName="PhoneVerify">
+        <Stack.Screen name="PhoneVerify" component={PhoneVerify} options = {{headerShown: false}} />
+        {/* <Stack.Screen name="PlansNest" component={PlansNest} options = {{headerShown: false}} />
+        <Stack.Screen name="Exercises" component={Exercises} options = {{headerShown: false}} />
+        <Stack.Screen name="WorkoutPlay" component={WorkoutPlay} options = {{headerShown: false}} /> */}
+        {/* <Stack.Screen name="Details" component={DetailsScreen} /> */}
+    </Stack.Navigator>
+)
+}
 
+const Tabs = () => {
+  return (
+      <Tab.Navigator
+      screenOptions={({ route }) => ({
+        tabBarIcon: ({ focused, color, size }) => {
+          let iconName;
+
+          if (route.name === 'EmailStack') {
+            iconName = focused
+              ? 'stopwatch'
+              : 'stopwatch';
+          } else if (route.name === 'PhoneStack') {
+            iconName = focused ? 'calendar' : 'calendar';
+          }
+          if (route.name === 'EmailStack') {
+              return <Entypo name = {iconName} color = {color} size = {size}/>
+          } else if (route.name === 'PhoneStack') {
+              return <Foundation name = {iconName} color = {color} size = {size}/>
+          }
+
+          // You can return any component that you like here!
+        },
+      })}
+      tabBarOptions={{
+        activeTintColor: colors.primary,
+        inactiveTintColor: 'gray',
+      }}
+    >
+          <Tab.Screen name="EmailStack" component={EmailStack} />
+          <Tab.Screen name="PhoneStack" component={PhoneStack} />
+      </Tab.Navigator>
+  )
+}
 export default App;
