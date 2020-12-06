@@ -38,7 +38,7 @@ const PhoneVerify = ({navigation}) => {
             flexDirection: 'row',
             alignItems:'center'}}>
             <MaterialCommunityIcons
-                name = {'login-variant'}
+                name = {'cellphone'}
                 color = {colors.primary}
                 style = {{fontSize: 25}}
             />
@@ -60,7 +60,7 @@ const PhoneVerify = ({navigation}) => {
             </LinearGradient>
             </TouchableOpacity> 
             <Text style={{fontFamily: Fonts.OSR, justifyContent: 'center', alignSelf: 'center', marginTop: 10, marginBottom: 5}}>Already have an account?</Text>
-            <TouchableOpacity style={{width: '100%',alignSelf: 'center',height: 50,justifyContent: 'center' ,alignItems: "center",backgroundColor: colors.primary,borderRadius: 50,}}  onPress={() => navigation.navigate('Topic', {email: email})}>
+            <TouchableOpacity  style={{width: '100%',alignSelf: 'center',height: 50,justifyContent: 'center' ,alignItems: "center",backgroundColor: colors.primary,borderRadius: 50,}}  onPress={() => navigation.navigate('Login')}>
             <LinearGradient style={{width: '100%',height: 50, flexDirection: 'row', justifyContent: 'center', alignItems: 'center', borderRadius: 50,}}
                 colors = {['lightgreen', colors.primary]}>
             <Text style={{fontFamily: Fonts.OSeB, color: 'white', fontSize: 19}}>L O G I N</Text>
