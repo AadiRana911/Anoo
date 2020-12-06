@@ -6,6 +6,8 @@ import * as Animatable from 'react-native-animatable';
 import { colors } from '../../theme';
 import {Fonts} from '../../utils/Fonts';
 
+
+
 const SignUp = ({navigation}) => {
     const {height} = Dimensions.get("screen");
     const [email, setEmail] = useState('');
@@ -53,6 +55,10 @@ const SignUp = ({navigation}) => {
             />
             </View>
    
+<<<<<<< HEAD
+            <TouchableOpacity style={{width: '100%',alignSelf: 'center',height: 50,justifyContent: 'center' ,alignItems: "center",backgroundColor: colors.primary,padding: 10,borderRadius: 7}} onPress={() => navigation.navigate('Topic')}>
+            <Text style={{fontFamily: Fonts.OSeB, color: 'white', fontSize: 20}}>V E R I F Y</Text>
+=======
             <TouchableOpacity style={{width: '100%',alignSelf: 'center',height: 50,justifyContent: 'center' ,alignItems: "center",backgroundColor: colors.primary,borderRadius: 50}} onPress={() => navigation.navigate('Topic', {email: email})}>
             <LinearGradient style={{width: '100%',height: 50, flexDirection: 'row', justifyContent: 'center', alignItems: 'center', borderRadius: 50,}}
                 colors = {[colors.primary,'lightgreen']}>
@@ -65,6 +71,7 @@ const SignUp = ({navigation}) => {
                 colors = {['lightgreen', colors.primary]}>
             <Text style={{fontFamily: Fonts.OSeB, color: 'white', fontSize: 19}}>L O G I N</Text>
             </LinearGradient>
+>>>>>>> c37352c7468651c8b1fb4a8ba2522add3130ad4b
             </TouchableOpacity>
             
             </View>
