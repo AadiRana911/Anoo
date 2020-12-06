@@ -13,75 +13,75 @@ const Topic = ({navigation}) => {
     const [cards, setCards] = useState([
         {
             name: 'Software Engineering',
-            color: 'pink',
+           // color: colors.primary,
         },
         {
             name: 'Hardware Engineering',
-            color: 'thistle',
+            //color: 'lightgreen',
         },
         {
             name: 'Data Science & Analytics',
-            color: 'aquamarine',
+            //color: 'lightgrey',
         },
         {
             name: 'Information Technology',
-            color: 'lightgrey',
+            //color: 'lightgrey',
         },
         {
             name: 'Security',
-            color: 'plum',
+            //color: colors.primary,
         },
         {
             name: 'Product Management',
-            color: 'lightblue',
+            //color: 'lightgreen',
         },
         {
             name: 'Communications',
-            color: 'lemonchiffon',
+            //color: 'lightgreen',
         },
         {
             name: 'Business Development',
-            color: 'salmon',
+            //color: 'lightgrey',
         },
         {
             name: 'Operations',
-            color: 'mistyrose',
+            //color: colors.primary,
         },
         {
             name: 'Supply Chain',
-            color: 'aquamarine',
+            //color: colors.primary,
         },
         {
             name: 'Customer Service',
-            color: 'thistle',
+            //color: 'lightgreen',
         },
         {
             name: 'Human Resources',
-            color: 'lightgrey',
+            //color: 'lightgrey',
         },
         {
             name: 'Legal',
-            color: 'lightblue',
+            //color: 'lightgrey',
         },
         {
             name: 'Admin',
-            color: 'pink',
+            //color: colors.primary,
         },
         {
             name: 'Corporate Finance',
-            color: 'plum',
+            //color: 'lightgreen',
         },
         {
             name: 'Software Engineering',
-            color: 'lemonchiffon',
+            //color: 'lightgreen',
         },
         {
             name: 'Software Engineering',
-            color: 'salmon',
+            //color: 'lightgrey',
         },
         {
             name: 'Software Engineering',
-            color: 'wheat',
+            //color: colors.primary,
         },
         
     ])
@@ -91,7 +91,7 @@ const Topic = ({navigation}) => {
     const RenderFlatList = ({text, color}) => {
         const [isPressed, setIsPressed] = useState(false)
         return(
-            <Card h = {height/7.9} w = {(width/3.2 )-10} backgroundColor = {isPressed === true ? color : 'rgba(236,236,236,0.69)'} styles = {{marginHorizontal: 10, marginVertical: 8}} text = {text} onPress = {() => {
+            <Card h = {height/12} w = {(width/3 )-20} color={isPressed === true ? 'white' : 'black'} borderColor={isPressed === true ? color : 'black'} backgroundColor = {isPressed === true ? color : 'white'} styles = {{marginHorizontal: 10, marginVertical: 8}} text = {text} onPress = {() => {
                 setIsPressed(!isPressed);
                 var temp = selected;
                 if(!temp.includes(text)){
@@ -104,7 +104,7 @@ const Topic = ({navigation}) => {
     }
     return(
         <View style = {{flex: 1}}>
-            <View style={{padding: '10%', justifyContent: 'center', alignItems: 'center', backgroundColor: 'white'}}>
+            <View style={{padding: '8%', justifyContent: 'center', alignItems: 'center', backgroundColor: 'white'}}>
             <Text style={{fontFamily: Fonts.OSB, fontSize: 20,padding: 1.5,}}>Choose your fields of interest</Text>
             <Text style={{fontFamily: Fonts.OSL, fontSize: 15, padding: 1.5,}}>This will help customize your feed.</Text>
             </View>
@@ -118,7 +118,7 @@ const Topic = ({navigation}) => {
                 renderItem = {({item}) => {
                     console.log(selected.length)
                     return(
-                        <RenderFlatList text = {item.name} color = {item.color} />
+                        <RenderFlatList text = {item.name} color = {colors.primary} />
                     )
                 }}
             />

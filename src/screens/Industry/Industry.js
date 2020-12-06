@@ -13,49 +13,49 @@ const Industry = ({navigation}) => {
     const [cards, setCards] = useState([
         {
             name: 'Tech',
-            color: 'pink',
+            //color: 'pink',
         },
         {
             name: 'Hardware',
-            color: 'lightblue',
+            //color: 'lightblue',
        },
         {
             name: 'E-commerce and Retail',
-            color: 'aquamarine',
+            //color: 'aquamarine',
         },
         {
             name: 'Gaming',
-            color: 'cornflowerblue',
+            //color: 'cornflowerblue',
         },
         {
             name: 'Media & Entertainment',
-            color: 'lemonchiffon',
+            //color: 'lemonchiffon',
         },
         {
             name: 'Telecomm',
-            color: 'lightpink',
+            //color: 'lightpink',
         },
         {
             name: 'Finance',
-            color: 'thistle',
+            //color: 'thistle',
         },
         {
             name: 'Health',
-            color: 'lightgreen',
+            //color: 'lightgreen',
         },
         {
             name: 'Auto',
-            color: 'lightsalmon',
+            //color: 'lightsalmon',
         },
         {
             name: 'Aviation',
-            color: 'plum',
+            //color: 'plum',
         },
     ])
     const RenderFlatList = ({text, color}) => {
         const [isPressed, setIsPressed] = useState(false)
         return(
-            <Card h = {height/7.9} w = {(width/3.2 )-10} backgroundColor = {isPressed === true ? color : 'rgba(236,236,236,0.69)'} styles = {{margin: 10}} text = {text} onPress = {() => {
+            <Card h = {height/13} w = {(width/3 )-20} color={isPressed === true ? 'white' : 'black'} borderColor={isPressed === true ? color : 'black'} backgroundColor = {isPressed === true ? color : 'rgba(236,236,236,0.69)'} styles = {{margin: 10}} text = {text} onPress = {() => {
                 setIsPressed(!isPressed);
                 var temp = selected;
                 temp.push(text);
@@ -80,7 +80,7 @@ const Industry = ({navigation}) => {
                 renderItem = {({item, index}) => {
                     console.log(item)
                     return(
-                        <RenderFlatList text = {item.name} color = {item.color} />
+                        <RenderFlatList text = {item.name} color = {colors.primary} />
                     )
                 }}
             />
