@@ -64,8 +64,8 @@ const SignUp = ({navigation}) => {
             <Text style={{fontFamily: Fonts.OSR, justifyContent: 'center', alignSelf: 'center', marginTop: 10, marginBottom: 5}}>Already have an account?</Text>
             <TouchableOpacity style={{width: '100%',alignSelf: 'center',height: 50,justifyContent: 'center' ,alignItems: "center",backgroundColor: colors.primary,borderRadius: 50,}}  onPress={() => navigation.navigate('Topic', {email: email})}>
             <LinearGradient style={{width: '100%',height: 50, flexDirection: 'row', justifyContent: 'center', alignItems: 'center', borderRadius: 50,}}
-                colors = {[colors.primary,'tomato']}>
-            <Text style={{fontFamily: Fonts.OSeB, color: 'white', fontSize: 18}}>S I G N I N </Text>
+                colors = {['lightgreen', colors.primary]}>
+            <Text style={{fontFamily: Fonts.OSeB, color: 'white', fontSize: 19}}>L O G I N</Text>
             </LinearGradient>
             </TouchableOpacity>
             
