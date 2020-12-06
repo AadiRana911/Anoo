@@ -27,6 +27,8 @@ import Industry from './src/screens/Industry';
 import EmailVerify from './src/screens/EmailVerify'
 import PhoneVerify from './src/screens/PhoneVerify'
 import Login from './src/screens/Login'
+import PhoneOTP from './src/screens/PhoneOTP'
+
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
@@ -58,6 +60,7 @@ const PhoneStack = () => {
 return (
     <Stack.Navigator initialRouteName="PhoneVerify">
         <Stack.Screen name="PhoneVerify" component={PhoneVerify} options = {{headerShown: false}} />
+        <Stack.Screen name="PhoneOTP" component={PhoneOTP} options = {{headerShown: false}} />
         {/* <Stack.Screen name="PlansNest" component={PlansNest} options = {{headerShown: false}} />
         <Stack.Screen name="Exercises" component={Exercises} options = {{headerShown: false}} />
         <Stack.Screen name="WorkoutPlay" component={WorkoutPlay} options = {{headerShown: false}} /> */}
@@ -73,16 +76,16 @@ const Tabs = () => {
         tabBarIcon: ({ focused, color, size }) => {
           let iconName;
 
-          if (route.name === 'EmailStack') {
+          if (route.name === 'Email') {
             iconName = focused
               ? 'stopwatch'
               : 'stopwatch';
-          } else if (route.name === 'PhoneStack') {
+          } else if (route.name === 'Phone') {
             iconName = focused ? 'calendar' : 'calendar';
           }
-          if (route.name === 'EmailStack') {
+          if (route.name === 'Email') {
               return <Entypo name = {iconName} color = {color} size = {size}/>
-          } else if (route.name === 'PhoneStack') {
+          } else if (route.name === 'Phone') {
               return <Foundation name = {iconName} color = {color} size = {size}/>
           }
 
@@ -94,8 +97,8 @@ const Tabs = () => {
         inactiveTintColor: 'gray',
       }}
     >
-          <Tab.Screen name="EmailStack" component={EmailStack} />
-          <Tab.Screen name="PhoneStack" component={PhoneStack} />
+          <Tab.Screen name="Email" component={EmailStack} />
+          <Tab.Screen name="Phone" component={PhoneStack} />
       </Tab.Navigator>
   )
 }
