@@ -7,7 +7,7 @@ import {Fonts} from '../../utils/Fonts';
 import Card from '../../components/Card/Card';
 import {colors} from '../../theme'
 
-const Industry = () => {
+const Industry = ({navigation}) => {
     const {height, width} = Dimensions.get('window');
     const [selected, setSelected] = useState([]);
     const [cards, setCards] = useState([
@@ -65,9 +65,9 @@ const Industry = () => {
         
     }
     return(
-        <ScrollView style = {{flex: 1, backgroundColor: 'white'}}>
+        <View style = {{flex: 1, backgroundColor: 'white'}}>
             <View style={{padding: '10%', justifyContent: 'center', alignItems: 'center', backgroundColor: 'white'}}>
-            <Text style={{fontFamily: Fonts.OSB, fontSize: 20,padding: 1.5,}}>Pick relevent industries</Text>
+            <Text style={{fontFamily: Fonts.OSB, fontSize: 20,padding: 1.5,}}>Pick relevant industries</Text>
             <Text style={{fontFamily: Fonts.OSL, fontSize: 15, padding: 1.5,}}>Choose 3 or more to get the best options.</Text>
             </View>
             <FlatList
@@ -84,10 +84,13 @@ const Industry = () => {
                     )
                 }}
             />
-        <View style={{paddingTop: '40%'}}>
-        <Button title= "Next" color = {colors.primary} />
+            <View style = {{position: 'absolute', left: 0, right: 0, bottom: 0}}>
+                <Button title= "Next" color = {colors.primary} onPress={() => {
+                    if (selected.length > 0)
+                        navigation.navigate('Home')
+                }} />
+            </View>
         </View>
-        </ScrollView>
         
     )
   
