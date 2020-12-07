@@ -53,7 +53,7 @@ const EmailVerify = ({navigation}) => {
             />
             </View>
    
-            <TouchableOpacity style={{width: '100%',alignSelf: 'center',height: 50,justifyContent: 'center' ,alignItems: "center",backgroundColor: colors.primary,borderRadius: 50}} onPress={() => navigation.navigate('Topic', {email: email})}>
+            <TouchableOpacity style={{width: '100%',alignSelf: 'center',height: 50,justifyContent: 'center' ,alignItems: "center",backgroundColor: colors.primary,borderRadius: 50}} onPress={() => navigation.navigate('PhoneOTP', {email: email})}>
             <LinearGradient style={{width: '100%',height: 50, flexDirection: 'row', justifyContent: 'center', alignItems: 'center', borderRadius: 50,}}
                 colors = {[colors.primary,'lightgreen']}>
             <Text style={{fontFamily: Fonts.OSeB, color: 'white', fontSize: 21}}>V E R I F Y</Text>
