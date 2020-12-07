@@ -28,6 +28,8 @@ import EmailVerify from './src/screens/EmailVerify'
 import PhoneVerify from './src/screens/PhoneVerify'
 import Login from './src/screens/Login'
 import PhoneOTP from './src/screens/PhoneOTP'
+import GettingStarted from './src/screens/GettingStarted/GettingStarted';
+import SetPassword from './src/screens/SetPassword/SetPassword';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -42,6 +44,8 @@ const App = () => {
         <Stack.Screen name="Topic" component={Topic} options = {{headerShown: false}} />
         <Stack.Screen name="Industry" component={Industry} options = {{headerShown: false}} />
         <Stack.Screen name="Login" component={Login} options ={{headerShown: false}} />
+        <Stack.Screen name="GettingStarted" component={GettingStarted} options ={{headerShown: false}} />
+        <Stack.Screen name="SetPassword" component={SetPassword} options={{headerShown: false}} />
         <Stack.Screen name="Tabs" component={Tabs} options = {{headerShown: false}} />
       </Stack.Navigator>
     </NavigationContainer>
