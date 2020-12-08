@@ -30,7 +30,7 @@ import Login from './src/screens/Login'
 import PhoneOTP from './src/screens/PhoneOTP'
 import GettingStarted from './src/screens/GettingStarted/GettingStarted';
 import SetPassword from './src/screens/SetPassword/SetPassword';
-
+import EmailLink from './src/screens/EmailLink'
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
@@ -40,7 +40,7 @@ const App = () => {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Splash" component={Splash} options = {{headerShown: false}} />
-        {/* <Stack.Screen name="Home" component={Home} options = {{headerShown: false}} /> */}
+        <Stack.Screen name="Home" component={Home} options = {{headerShown: false}} />
         <Stack.Screen name="Topic" component={Topic} options = {{headerShown: false}} />
         <Stack.Screen name="Industry" component={Industry} options = {{headerShown: false}} />
         <Stack.Screen name="Login" component={Login} options ={{headerShown: false}} />
@@ -56,8 +56,8 @@ const EmailStack = () => {
   return (
       <Stack.Navigator initialRouteName="EmailVerify">
           <Stack.Screen name="EmailVerify" component={EmailVerify} options = {{headerShown: false}} />
-          {/* <Stack.Screen name="Exercises" component={Exercises} options = {{headerShown: false}} />
-          <Stack.Screen name="WorkoutPlay" component={WorkoutPlay} options = {{headerShown: false}} /> */}
+          <Stack.Screen name="EmailLink" component={EmailLink} options = {{headerShown: false}} />
+          {/* <Stack.Screen name="WorkoutPlay" component={WorkoutPlay} options = {{headerShown: false}} /> */}
       </Stack.Navigator>
   )
 }
