@@ -33,12 +33,13 @@ import PhoneOTP from './src/screens/PhoneOTP'
 import GettingStarted from './src/screens/GettingStarted/GettingStarted';
 import SetPassword from './src/screens/SetPassword/SetPassword';
 import EmailLink from './src/screens/EmailLink'
+import Search from './src/screens/Search';
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
 const App = () => {
   return (
-    // <Industry />
+     //<Industry />
     <NavigationContainer>
 
       <Stack.Navigator>
@@ -51,6 +52,8 @@ const App = () => {
         <Stack.Screen name="GettingStarted" component={GettingStarted} options ={{headerShown: false}} />
         <Stack.Screen name="SetPassword" component={SetPassword} options={{headerShown: false}} />
         <Stack.Screen name="Tabs" component={Tabs} options = {{headerShown: false}} />
+        <Stack.Screen name="Search" component={Search} options = {{headerShown: false}} />
+        
       </Stack.Navigator>
     </NavigationContainer>
   );
