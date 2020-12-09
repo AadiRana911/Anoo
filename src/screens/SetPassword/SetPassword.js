@@ -11,7 +11,10 @@ const SetPassword = ({navigation}) => {
     const {height} = Dimensions.get("screen");
     const [password, setPassword]= useState('');
     const [repassword, setRepassword] = useState('');
-    const [username, setUsername] = useState('');
+    const [icon, setIcon] = useState('eye-off');
+    const [reIcon, setReIcon] = useState('eye-off');
+    const [secureTextEntry, setSecureTextEntry] = useState(true);
+    const [reSecureTextEntry, setReSecureTextEntry] = useState(true);
     return (
         <View style={styles.container}>
            <View style={{flex: 0.5, justifyContent: 'center', alignItems: 'center', backgroundColor: colors.primary}}>
@@ -41,21 +44,28 @@ const SetPassword = ({navigation}) => {
                 color = {colors.primary}
                 style = {{fontSize: 25}}
             />
-            <TextInput style={{height: 50,
-                marginLeft:16,
-                borderBottomColor: '#FFFFFF',
-                flex:1, fontFamily: Fonts.OSR}}
-                placeholder="password"
-                secureTextEntry={true}
-                keyboardType="email-address"
-                underlineColorAndroid='transparent'
-                onChangeText={(password) => setPassword(password)}
-            />
-            <Feather 
-            name={'eye'}
-            color={'lightgrey'}
-            size={2}
-            />
+                <TextInput
+                    style={{height: 50,
+                    marginLeft:16,
+                    borderBottomColor: '#FFFFFF',
+                    flex:1, fontFamily: Fonts.OSR}}
+                    placeholder = {'Password'}
+                    secureTextEntry = {secureTextEntry}
+                    placeholderTextColor = {'gray'}
+                    onChangeText = {(text) => setPassword(text)}
+                />
+                <Feather 
+                    name = {icon}
+                    style = {{color: 'black', fontSize: 20}}
+                    onPress = {() => {
+                        setSecureTextEntry(!secureTextEntry)
+                        if(icon === 'eye'){
+                            setIcon('eye-off');
+                        }else{
+                            setIcon('eye');
+                        }
+                    }}
+                />
             </View>
             <View style={{padding: 10,
             borderColor: 'black',
@@ -73,16 +83,28 @@ const SetPassword = ({navigation}) => {
                 color = {colors.primary}
                 style = {{fontSize: 25}}
             />
-            <TextInput style={{height: 50,
-                marginLeft:16,
-                borderBottomColor: '#FFFFFF',
-                flex:1, fontFamily: Fonts.OSR}}
-                placeholder="Re-enter password"
-                secureTextEntry={true}
-                keyboardType="email-address"
-                underlineColorAndroid='transparent'
-                onChangeText={(repassword) => setRepassword(repassword)}
-            />
+                <TextInput
+                    style={{height: 50,
+                    marginLeft:16,
+                    borderBottomColor: '#FFFFFF',
+                    flex:1, fontFamily: Fonts.OSR}}
+                    placeholder = {'Re-enter Password'}
+                    secureTextEntry = {reSecureTextEntry}
+                    placeholderTextColor = {'gray'}
+                    onChangeText = {(text) => setPassword(text)}
+                />
+                <Feather 
+                    name = {reIcon}
+                    style = {{color: 'black', fontSize: 20}}
+                    onPress = {() => {
+                        setReSecureTextEntry(!reSecureTextEntry)
+                        if(reIcon === 'eye'){
+                            setReIcon('eye-off');
+                        }else{
+                            setReIcon('eye');
+                        }
+                    }}
+                />
             </View>
 
    

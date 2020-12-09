@@ -98,12 +98,16 @@ const PhoneOTP = ({navigation}) => {
             <View style = {{flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
                 {
                     Array(lengthInput).fill().map((data, index) => (
-                        <View key = {index.toString()} style = {{paddingVertical: 11, width: 40, margin: 5, alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(100, 100, 100, 0.1)', borderRadius: 10}}>
+                        <TouchableOpacity key = {index.toString()} style = {{paddingVertical: 11, width: 40, margin: 5, alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(100, 100, 100, 0.1)', borderRadius: 10}}
+                            onPress = {
+                                () => textInput.focus()
+                            }
+                        >
                             <Text style = {{textAlign: 'center', fontSize: 16, fontFamily: Fonts.OSB}}>
                                 {/* {internalVal && internalVal.length >= 0 ? internalVal[index] : ""} */}
                                 {internalVal[index]}
                             </Text>
-                        </View>
+                        </TouchableOpacity>
                     ))
                 }
                 

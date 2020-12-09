@@ -7,7 +7,8 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "ass": "react-native run-android"
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.10",
@@ -18,6 +19,7 @@
     "react-native": "0.63.4",
     "react-native-animatable": "^1.3.3",
     "react-native-cards": "^1.1.4",
+    "react-native-elements": "^3.0.0-alpha.1",
     "react-native-gesture-handler": "^1.9.0",
     "react-native-keyboard-aware-scrollview": "^2.1.0",
     "react-native-linear-gradient": "^2.5.6",
