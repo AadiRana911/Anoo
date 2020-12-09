@@ -49,34 +49,36 @@ const Login = ({navigation}) => {
             />
             </View>
 
-            <View style={{padding: 10,
-            borderColor: 'black',
-            borderRadius:10,
-            borderWidth: 1,
-            borderBottomWidth: 5,
-            width:'100%',
-            alignSelf: 'center',
-            height:55,
-            marginBottom:20,
-            flexDirection: 'row',
-            alignItems:'center'}}>
-            <MaterialCommunityIcons
-                name = {'lock'}
-                color = {colors.primary}
-                style = {{fontSize: 25}}
-            />
-            <TextInput style={{height: 50,
-                marginLeft:16,
-                borderBottomColor: '#FFFFFF',
-                flex:1, fontFamily: Fonts.OSR}}
-                placeholder="password"
-                secureTextEntry={true}
-                keyboardType="email-address"
-                underlineColorAndroid='transparent'
-                onChangeText={(password) => setPassword(password)}
-            />
+            <View>
+                <View style={{padding: 10,
+                    borderColor: 'black',
+                    borderRadius:10,
+                    borderWidth: 1,
+                    borderBottomWidth: 5,
+                    width:'100%',
+                    alignSelf: 'center',
+                    height:55,
+                    marginBottom:20,
+                    flexDirection: 'row',
+                    alignItems:'center'}}>
+                <MaterialCommunityIcons 
+                    name = {'lock'}
+                    color = {colors.primary}
+                    style = {{fontSize: 25}}
+                />
+                <TextInput style={{height: 50,
+                    marginLeft:16,
+                    borderBottomColor: '#FFFFFF',
+                    flex:1, fontFamily: Fonts.OSR}}
+                    placeholder="Password"
+                    secureTextEntry={true}
+                    underlineColorAndroid='transparent'
+                    onChangeText={(password) => setPassword(password)}
+
+                />
             </View>
-   
+            
+            </View>
             <TouchableOpacity style={{width: '100%',alignSelf: 'center',height: 50,justifyContent: 'center' ,alignItems: "center",backgroundColor: colors.primary,borderRadius: 50}} onPress={() => navigation.navigate('SetPassword', {email: email})}>
             <LinearGradient style={{width: '100%',height: 50, flexDirection: 'row', justifyContent: 'center', alignItems: 'center', borderRadius: 50,}}
                 colors = {[colors.primary,'lightgreen']}>
