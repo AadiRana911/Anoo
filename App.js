@@ -33,6 +33,8 @@ import GettingStarted from './src/screens/GettingStarted/GettingStarted';
 import SetPassword from './src/screens/SetPassword/SetPassword';
 import EmailLink from './src/screens/EmailLink'
 import Search from './src/screens/Search';
+import Notification from './src/screens/Notification';
+import Chat from './src/screens/Chat/Chat';
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
