@@ -20,19 +20,21 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import Feather from 'react-native-vector-icons/Feather'
 
 import {Fonts} from './src/utils/Fonts';
-import {colors} from './src/theme'
+import {colors} from './src/theme';
 import Splash from './src/screens/Splash';
 import Home from './src/screens/Home';
-import Topic from './src/screens/Topic'
+import Topic from './src/screens/Topic';
 import Industry from './src/screens/Industry';
-import EmailVerify from './src/screens/EmailVerify'
-import PhoneVerify from './src/screens/PhoneVerify'
-import Login from './src/screens/Login'
-import PhoneOTP from './src/screens/PhoneOTP'
+import EmailVerify from './src/screens/EmailVerify';
+import PhoneVerify from './src/screens/PhoneVerify';
+import Login from './src/screens/Login';
+import PhoneOTP from './src/screens/PhoneOTP';
 import GettingStarted from './src/screens/GettingStarted/GettingStarted';
 import SetPassword from './src/screens/SetPassword/SetPassword';
-import EmailLink from './src/screens/EmailLink'
+import EmailLink from './src/screens/EmailLink';
 import Search from './src/screens/Search';
+import More from './src/screens/More';
+
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
@@ -135,6 +137,16 @@ const SearchStack = () => {
   )
 }
 
+const MoreStack = () => {
+  return (
+    <Stack.Navigator initialRouteName="More">
+        <Stack.Screen name="More" component={More} options = {{headerShown: false}} />
+        {/* <Stack.Screen name="EmailLink" component={EmailLink} options = {{headerShown: false}} /> */}
+        {/* <Stack.Screen name="WorkoutPlay" component={WorkoutPlay} options = {{headerShown: false}} /> */}
+    </Stack.Navigator>
+  )
+}
+
 const MainTabs = () => {
   return (
     <Tab.Navigator
@@ -179,7 +191,7 @@ const MainTabs = () => {
         <Tab.Screen name="Search" component={SearchStack} />
         <Tab.Screen name="Message" component={HomeStack} />
         <Tab.Screen name="Notification" component={HomeStack} />
-        <Tab.Screen name="More" component={HomeStack} />
+        <Tab.Screen name="More" component={MoreStack} />
     </Tab.Navigator>
   )
 }
