@@ -26,55 +26,55 @@ const Chat = () => {
             name: 'Asad',
             id: '1',
             date: 'Nov 28',
-            //image: {uri: 'https://homepages.cae.wisc.edu/~ece533/images/cat.png'}
+            image: {uri: 'https://homepages.cae.wisc.edu/~ece533/images/cat.png'}
         },
         {
             name: 'Anna',
             id: '2',
             date: 'Nov 28',
-            //image: {uri: 'https://homepages.cae.wisc.edu/~ece533/images/cat.png'}
+            image: {uri: 'https://homepages.cae.wisc.edu/~ece533/images/cat.png'}
         },
         {
             name: 'Smith',
             id: '3',
             date: 'Nov 28',
-            //image: {uri: 'https://homepages.cae.wisc.edu/~ece533/images/cat.png'}
+            image: {uri: 'https://homepages.cae.wisc.edu/~ece533/images/cat.png'}
         },
         {
             name: 'John',
             id: '4',
             date: 'Nov 28',
-            //image: {uri: 'https://homepages.cae.wisc.edu/~ece533/images/cat.png'}
+            image: {uri: 'https://homepages.cae.wisc.edu/~ece533/images/cat.png'}
         },
         {
             name: 'Jude',
             id: '5',
             date: 'Nov 28',
-            //image: {uri: 'https://homepages.cae.wisc.edu/~ece533/images/cat.png'}
+            image: {uri: 'https://homepages.cae.wisc.edu/~ece533/images/cat.png'}
         },
         {
             name: 'Peter',
             id: '6',
             date: 'Nov 28',
-            //image: {uri: 'https://homepages.cae.wisc.edu/~ece533/images/cat.png'}
+            image: {uri: 'https://homepages.cae.wisc.edu/~ece533/images/cat.png'}
         },
         {
             name: 'Jack',
             id: '7',
             date: 'Nov 28',
-           // image: {uri: 'https://homepages.cae.wisc.edu/~ece533/images/cat.png'}
+           image: {uri: 'https://homepages.cae.wisc.edu/~ece533/images/cat.png'}
         },
         {
             name: 'Me',
             id: '8',
             date: 'Nov 28',
-            //image: {uri: 'https://homepages.cae.wisc.edu/~ece533/images/cat.png'}
+            image: {uri: 'https://homepages.cae.wisc.edu/~ece533/images/cat.png'}
         },
         {
             name: 'Varda',
             id: '9',
             date: 'Nov 28',
-            //image: {uri: 'https://homepages.cae.wisc.edu/~ece533/images/cat.png'}
+            image: {uri: 'https://homepages.cae.wisc.edu/~ece533/images/cat.png'}
         },
     ])
     return(
@@ -118,7 +118,7 @@ const Chat = () => {
                         return(
                             <Chatting 
                             name ={item.name}
-                            image={item.image}
+                            image={item.image.uri}
                             date={item.date} />
                         )
                     }}
