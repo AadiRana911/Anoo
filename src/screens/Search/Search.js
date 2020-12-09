@@ -9,8 +9,6 @@ import {Fonts} from '../../utils/Fonts';
 import Brands from '../../components/List/Brands';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
-
-
 // const Item = ({ item, onPress, style}) => (
 //     <TouchableOpacity onPress={onPress} style={[style, styles.item]}>
 //         <Text style={styles.textSign}{...item.name}></Text>
@@ -25,39 +23,47 @@ const Search = () => {
         {
             name: 'Google',
             id: '1',
-
+            image: {uri: 'https://homepages.cae.wisc.edu/~ece533/images/cat.png'}
         },
         {
             name: 'Auth0',
             id: '2',
+            image: {uri: 'https://homepages.cae.wisc.edu/~ece533/images/cat.png'}
         },
         {
             name: 'Facebook',
             id: '3',
+            image: {uri: 'https://homepages.cae.wisc.edu/~ece533/images/cat.png'}
         },
         {
             name: 'Stripe',
             id: '4',
+            image: {uri: 'https://homepages.cae.wisc.edu/~ece533/images/cat.png'}
         },
         {
             name: 'Salesforce',
             id: '5',
+            image: {uri: 'https://homepages.cae.wisc.edu/~ece533/images/cat.png'}
         },
         {
             name: 'TikTok',
             id: '6',
+            image: {uri: 'https://homepages.cae.wisc.edu/~ece533/images/cat.png'}
         },
         {
             name: 'Uber',
             id: '7',
+            image: {uri: 'https://homepages.cae.wisc.edu/~ece533/images/cat.png'}
         },
         {
             name: 'Airbnb',
             id: '8',
+            image: {uri: 'https://homepages.cae.wisc.edu/~ece533/images/cat.png'}
         },
         {
             name: 'Lyft',
             id: '9',
+            image: {uri: 'https://homepages.cae.wisc.edu/~ece533/images/cat.png'}
         },
     ])
     // const renderItem = ({item}) => {
@@ -70,10 +76,11 @@ const Search = () => {
     //     );
     // };
    
-    const RenderFlatList = ({text}) => {
+    const RenderFlatList = ({text, image}) => {
         const [isPressed, setIsPressed] = useState(false)
+        console.log('=>', image)
         return(
-            <Brands color={'grey'} styles = {{margin: 10}} text = {text}  
+            <Brands color={'grey'} styles = {{margin: 10}} text = {text} image = {image.uri}
             />
         )
         
@@ -112,13 +119,14 @@ const Search = () => {
                 data = {brands}
                 keyExtractor = {(item) => item.id}
                 horizontal = {false}
+                showsVerticalScrollIndicator = {false}
                 //style = {{backgroundColor: 'tomato'}}
                 numColumns = {1}
                 contentContainerStyle = {{alignItems: 'flex-start'}}
                 renderItem = {({item, index}) => {
-                    console.log(item)
+                    console.log(item.image)
                     return(
-                        <RenderFlatList text = {item.name} />
+                        <RenderFlatList text = {item.name} image = {item.image} />
                     )
                 }}
             /> 

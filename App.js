@@ -14,9 +14,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import Entypo from 'react-native-vector-icons/Entypo'
 import EvilIcons from 'react-native-vector-icons/EvilIcons'
-import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
+import FontAwesome from 'react-native-vector-icons/FontAwesome'
 import Foundation from 'react-native-vector-icons/Foundation'
-import AntDesign from 'react-native-vector-icons/AntDesign'
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import Feather from 'react-native-vector-icons/Feather'
 
@@ -41,10 +40,9 @@ const App = () => {
   return (
      //<Industry />
     <NavigationContainer>
-
       <Stack.Navigator>
-        {/* <Stack.Screen name="MainTabs" component={MainTabs} options = {{headerShown: false}} /> */}
-        <Stack.Screen name="Splash" component={Splash} options = {{headerShown: false}} />
+        <Stack.Screen name="MainTabs" component={MainTabs} options = {{headerShown: false}} />
+        {/* <Stack.Screen name="Splash" component={Splash} options = {{headerShown: false}} />
         <Stack.Screen name="Home" component={Home} options = {{headerShown: false}} />
         <Stack.Screen name="Topic" component={Topic} options = {{headerShown: false}} />
         <Stack.Screen name="Industry" component={Industry} options = {{headerShown: false}} />
@@ -52,7 +50,7 @@ const App = () => {
         <Stack.Screen name="GettingStarted" component={GettingStarted} options ={{headerShown: false}} />
         <Stack.Screen name="SetPassword" component={SetPassword} options={{headerShown: false}} />
         <Stack.Screen name="Tabs" component={Tabs} options = {{headerShown: false}} />
-        <Stack.Screen name="Search" component={Search} options = {{headerShown: false}} />
+        <Stack.Screen name="Search" component={Search} options = {{headerShown: false}} /> */}
         
       </Stack.Navigator>
     </NavigationContainer>
@@ -68,6 +66,8 @@ const EmailStack = () => {
       </Stack.Navigator>
   )
 }
+
+
 const PhoneStack = () => {
 return (
     <Stack.Navigator initialRouteName="PhoneVerify">
@@ -122,7 +122,17 @@ const HomeStack = () => {
         {/* <Stack.Screen name="EmailLink" component={EmailLink} options = {{headerShown: false}} /> */}
         {/* <Stack.Screen name="WorkoutPlay" component={WorkoutPlay} options = {{headerShown: false}} /> */}
     </Stack.Navigator>
-)
+  )
+}
+
+const SearchStack = () => {
+  return (
+    <Stack.Navigator initialRouteName="Search">
+        <Stack.Screen name="Search" component={Search} options = {{headerShown: false}} />
+        {/* <Stack.Screen name="EmailLink" component={EmailLink} options = {{headerShown: false}} /> */}
+        {/* <Stack.Screen name="WorkoutPlay" component={WorkoutPlay} options = {{headerShown: false}} /> */}
+    </Stack.Navigator>
+  )
 }
 
 const MainTabs = () => {
@@ -134,8 +144,8 @@ const MainTabs = () => {
 
         if (route.name === 'Home') {
           iconName = focused
-            ? 'stopwatch'
-            : 'stopwatch';
+            ? 'home'
+            : 'home';
         } else if (route.name === 'Search') {
           iconName = focused ? 'search' : 'search';
         } else if (route.name === 'Message') {
@@ -146,7 +156,7 @@ const MainTabs = () => {
           iconName = focused ? 'more-horizontal' : 'more-horizontal'
         }
         if (route.name === 'Home') {
-            return <Entypo name = {iconName} color = {color} size = {size}/>
+            return <FontAwesome name = {iconName} color = {color} size = {size}/>
         } else if (route.name === 'Search') {
             return <Feather name = {iconName} color = {color} size = {size}/>
         } else if (route.name === 'Message') {
@@ -166,7 +176,7 @@ const MainTabs = () => {
     }}
   >
         <Tab.Screen name="Home" component={HomeStack} />
-        <Tab.Screen name="Search" component={HomeStack} />
+        <Tab.Screen name="Search" component={SearchStack} />
         <Tab.Screen name="Message" component={HomeStack} />
         <Tab.Screen name="Notification" component={HomeStack} />
         <Tab.Screen name="More" component={HomeStack} />
