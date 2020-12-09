@@ -5,10 +5,9 @@
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
-    "start": "react-native start",
+    "start": "react-native run-android",
     "test": "jest",
-    "lint": "eslint .",
-    "ass": "react-native run-android"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.10",
