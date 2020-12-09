@@ -31,24 +31,27 @@ import PhoneOTP from './src/screens/PhoneOTP'
 import GettingStarted from './src/screens/GettingStarted/GettingStarted';
 import SetPassword from './src/screens/SetPassword/SetPassword';
 import EmailLink from './src/screens/EmailLink'
+import Search from './src/screens/Search';
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
 const App = () => {
   return (
-    // <Industry />
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Splash" component={Splash} options = {{headerShown: false}} />
-        <Stack.Screen name="Home" component={Home} options = {{headerShown: false}} />
-        <Stack.Screen name="Topic" component={Topic} options = {{headerShown: false}} />
-        <Stack.Screen name="Industry" component={Industry} options = {{headerShown: false}} />
-        <Stack.Screen name="Login" component={Login} options ={{headerShown: false}} />
-        <Stack.Screen name="GettingStarted" component={GettingStarted} options ={{headerShown: false}} />
-        <Stack.Screen name="SetPassword" component={SetPassword} options={{headerShown: false}} />
-        <Stack.Screen name="Tabs" component={Tabs} options = {{headerShown: false}} />
-      </Stack.Navigator>
-    </NavigationContainer>
+     <Search />
+    // <NavigationContainer>
+    //   <Stack.Navigator>
+    //     <Stack.Screen name="Splash" component={Splash} options = {{headerShown: false}} />
+    //     <Stack.Screen name="Home" component={Home} options = {{headerShown: false}} />
+    //     <Stack.Screen name="Topic" component={Topic} options = {{headerShown: false}} />
+    //     <Stack.Screen name="Industry" component={Industry} options = {{headerShown: false}} />
+    //     <Stack.Screen name="Login" component={Login} options ={{headerShown: false}} />
+    //     <Stack.Screen name="GettingStarted" component={GettingStarted} options ={{headerShown: false}} />
+    //     <Stack.Screen name="SetPassword" component={SetPassword} options={{headerShown: false}} />
+    //     <Stack.Screen name="Tabs" component={Tabs} options = {{headerShown: false}} />
+    //     <Stack.Screen name="Search" component={Search} options = {{headerShown: false}} />
+        
+    //   </Stack.Navigator>
+    // </NavigationContainer>
   );
 };
 
