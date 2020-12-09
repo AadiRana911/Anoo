@@ -125,7 +125,7 @@ const Topic = ({navigation}) => {
             <View style = {{position: 'absolute', left: 0, right: 0, bottom: 0}}>
                 <Button title= "Next" color = {colors.primary} onPress={() => {
                     if (selected.length > 0)
-                        navigation.navigate('Industry')
+                        navigation.navigate('MainTabs')
                 }} />
             </View>
         </View>

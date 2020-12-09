@@ -25,7 +25,7 @@ const EmailLink = ({navigation}) => {
    
             
             <Text style={{fontFamily: Fonts.OSR, justifyContent: 'center', alignSelf: 'center', marginTop: 10, marginBottom: 5}}>Verified?</Text>
-            <TouchableOpacity style={{width: '100%',alignSelf: 'center',height: 50,justifyContent: 'center' ,alignItems: "center",backgroundColor: colors.primary,borderRadius: 50,}}  onPress={() => navigation.navigate('Login')}>
+            <TouchableOpacity style={{width: '100%',alignSelf: 'center',height: 50,justifyContent: 'center' ,alignItems: "center",backgroundColor: colors.primary,borderRadius: 50,}}  onPress={() => navigation.navigate('SetPassword')}>
             <LinearGradient style={{width: '100%',height: 50, flexDirection: 'row', justifyContent: 'center', alignItems: 'center', borderRadius: 50,}}
                 colors = {['lightgreen', colors.primary]}>
             <Text style={{fontFamily: Fonts.OSeB, color: 'white', fontSize: 19}}>L O G I N</Text>

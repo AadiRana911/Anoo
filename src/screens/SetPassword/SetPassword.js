@@ -108,7 +108,7 @@ const SetPassword = ({navigation}) => {
             </View>
 
    
-            <TouchableOpacity style={{width: '80%',alignSelf: 'center',height: 50,justifyContent: 'center' ,alignItems: "center",backgroundColor: colors.primary,borderRadius: 50}} onPress={() => navigation.navigate('Topic')}>
+            <TouchableOpacity style={{width: '80%',alignSelf: 'center',height: 50,justifyContent: 'center' ,alignItems: "center",backgroundColor: colors.primary,borderRadius: 50}} onPress={() => navigation.navigate('Industry')}>
             <LinearGradient style={{width: '100%',height: 50, flexDirection: 'row', justifyContent: 'center', alignItems: 'center', borderRadius: 50,}}
                 colors = {[colors.primary,'lightgreen']}>
             <Text style={{fontFamily: Fonts.OSeB, color: 'white', fontSize: 21}}>C O N F I R M</Text>

@@ -45,17 +45,14 @@ const App = () => {
      //<Industry />
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="MainTabs" component={MainTabs} options = {{headerShown: false}} />
-        {/* <Stack.Screen name="Splash" component={Splash} options = {{headerShown: false}} />
-        <Stack.Screen name="Home" component={Home} options = {{headerShown: false}} />
+        <Stack.Screen name="Splash" component={Splash} options = {{headerShown: false}} />
         <Stack.Screen name="Topic" component={Topic} options = {{headerShown: false}} />
         <Stack.Screen name="Industry" component={Industry} options = {{headerShown: false}} />
         <Stack.Screen name="Login" component={Login} options ={{headerShown: false}} />
         <Stack.Screen name="GettingStarted" component={GettingStarted} options ={{headerShown: false}} />
         <Stack.Screen name="SetPassword" component={SetPassword} options={{headerShown: false}} />
         <Stack.Screen name="Tabs" component={Tabs} options = {{headerShown: false}} />
-        <Stack.Screen name="Search" component={Search} options = {{headerShown: false}} /> */}
-        
+        <Stack.Screen name="MainTabs" component={MainTabs} options = {{headerShown: false}} />
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -162,7 +159,7 @@ const MainTabs = () => {
             : 'home';
         } else if (route.name === 'Search') {
           iconName = focused ? 'search' : 'search';
-        } else if (route.name === 'Message') {
+        } else if (route.name === 'Chat') {
           iconName = focused ? 'message' : 'message'
         } else if (route.name === 'Notification') {
           iconName = focused ? 'notifications' : 'notifications'
@@ -173,7 +170,7 @@ const MainTabs = () => {
             return <FontAwesome name = {iconName} color = {color} size = {size}/>
         } else if (route.name === 'Search') {
             return <Feather name = {iconName} color = {color} size = {size}/>
-        } else if (route.name === 'Message') {
+        } else if (route.name === 'Chat') {
             return <MaterialIcons name = {iconName} color = {color} size = {size}/>
         } else if (route.name === 'Notification') {
             return <MaterialIcons name = {iconName} color = {color} size = {size}/>
@@ -191,8 +188,8 @@ const MainTabs = () => {
   >
         <Tab.Screen name="Home" component={HomeStack} />
         <Tab.Screen name="Search" component={SearchStack} />
-        <Tab.Screen name="Message" component={HomeStack} />
-        <Tab.Screen name="Notification" component={HomeStack} />
+        <Tab.Screen name="Chat" component={Chat} />
+        <Tab.Screen name="Notification" component={Notification} />
         <Tab.Screen name="More" component={MoreStack} />
     </Tab.Navigator>
   )
