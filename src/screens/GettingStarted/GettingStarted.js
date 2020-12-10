@@ -4,7 +4,6 @@ import LinearGradient from 'react-native-linear-gradient';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import * as Animatable from 'react-native-animatable';
 import { colors } from '../../theme';
-import {Fonts} from '../../utils/Fonts';
 
 const GettingStarted = ({navigation}) => {
     const {height} = Dimensions.get("screen");
@@ -59,12 +58,12 @@ const styles = StyleSheet.create({
     title: {
         color: colors.headingColor,
         fontSize: 30,
-        fontFamily: Fonts.OSsBi
+        
     },
     text: {
         color: 'grey',
         marginTop: 5,
-        fontFamily: Fonts.OSsBi
+        
     },
     signIn: {
         width: 150,
@@ -76,7 +75,7 @@ const styles = StyleSheet.create({
     },
     textSign: {
         color: 'white',
-        fontFamily: Fonts.OSB
+
     },
     button: {
         alignItems: 'flex-end',

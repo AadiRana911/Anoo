@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import { StyleSheet, Text, View, Dimensions, ImageBackground, TouchableOpacity } from 'react-native';
-import {Fonts} from '../utils/Fonts';
 import {colors} from '../theme';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Entypo from 'react-native-vector-icons/Entypo'
@@ -19,13 +18,13 @@ const Chatting = ({name, image, date}) => {
                     source={{uri: image}}
                     style={{ width: 50, height: 50, borderRadius: 50 }}
                 />
-                <Text style = {{fontSize: 12,paddingHorizontal: 10, paddingVertical: 3, fontFamily: Fonts.OSBi, color: 'black', alignSelf: 'center'}}>{name}</Text>
+                <Text style = {{fontSize: 12,paddingHorizontal: 10, paddingVertical: 3, color: 'black', alignSelf: 'center'}}>{name}</Text>
             </View>
             </View>
             <Ionicons name = "chatbubble-outline" style = {{alignSelf: 'flex-end', fontSize: 20, color: 'grey', margin: 10}} />
             </View>
             <View style = {{marginBottom: 10, flexDirection: 'row-reverse', marginHorizontal: 15}}>
-                <Text style = {{fontSize: 10, fontFamily: Fonts.OSR, color: colors.primary}}>{date}</Text>
+                <Text style = {{fontSize: 10, color: colors.primary}}>{date}</Text>
             </View>
         </View>
         </View>

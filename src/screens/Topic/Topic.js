@@ -4,7 +4,6 @@ import { View, Text, Dimensions, ScrollView, TouchableOpacity, Button, FlatList 
 import { Header } from 'react-native/Libraries/NewAppScreen';
 import {colors} from '../../theme'
 
-import {Fonts} from '../../utils/Fonts';
 import Card from '../../components/Card/Card';
 
 const Topic = ({navigation}) => {
@@ -105,8 +104,8 @@ const Topic = ({navigation}) => {
     return(
         <View style = {{flex: 1}}>
             <View style={{padding: '8%', justifyContent: 'center', alignItems: 'center', backgroundColor: 'white'}}>
-            <Text style={{fontFamily: Fonts.OSB, fontSize: 20,padding: 1.5,}}>Choose your fields of interest</Text>
-            <Text style={{fontFamily: Fonts.OSL, fontSize: 15, padding: 1.5,}}>This will help customize your feed.</Text>
+            <Text style={{fontSize: 20,padding: 1.5,}}>Choose your fields of interest</Text>
+            <Text style={{fontSize: 15, padding: 1.5,}}>This will help customize your feed.</Text>
             </View>
             <FlatList 
                 data = {cards}
