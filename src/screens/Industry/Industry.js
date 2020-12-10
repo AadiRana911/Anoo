@@ -3,7 +3,6 @@ import React, {useState} from 'react'
 import { View, Text, Dimensions, ScrollView, TouchableOpacity, Button, FlatList } from 'react-native'
 import { Header } from 'react-native/Libraries/NewAppScreen';
 
-import {Fonts} from '../../utils/Fonts';
 import Card from '../../components/Card/Card';
 import {colors} from '../../theme'
 
@@ -67,8 +66,8 @@ const Industry = ({navigation}) => {
     return(
         <View style = {{flex: 1, backgroundColor: 'white'}}>
             <View style={{padding: '10%', justifyContent: 'center', alignItems: 'center', backgroundColor: 'white'}}>
-            <Text style={{fontFamily: Fonts.OSB, fontSize: 20,padding: 1.5,}}>Pick relevant industries</Text>
-            <Text style={{fontFamily: Fonts.OSL, fontSize: 15, padding: 1.5,}}>Choose 3 or more to get the best options.</Text>
+            <Text style={{fontSize: 20,padding: 1.5,}}>Pick relevant industries</Text>
+            <Text style={{fontSize: 15, padding: 1.5,}}>Choose 3 or more to get the best options.</Text>
             </View>
             <FlatList
                 data = {cards}

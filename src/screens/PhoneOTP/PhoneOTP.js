@@ -4,7 +4,6 @@ import LinearGradient from 'react-native-linear-gradient';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import * as Animatable from 'react-native-animatable';
 import { colors } from '../../theme';
-import {Fonts} from '../../utils/Fonts';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scrollview'
 
 const PhoneOTP = ({navigation}) => {
@@ -52,15 +51,15 @@ const PhoneOTP = ({navigation}) => {
     return(
         <KeyboardAwareScrollView style={{flex: 1, backgroundColor: colors.primary}} contentContainerStyle = {{flexGrow: 1}}>
             <View style={{flex: 0.5, justifyContent: 'center', alignItems: 'center', backgroundColor: colors.primary}}>
-                { <Text style={{fontFamily: Fonts.OSB, fontSize: 30, color: 'white'}}>Register Now!</Text> }
+                { <Text style={{fontSize: 30, color: 'white'}}>Register Now!</Text> }
             </View>
             <Animatable.View animation='fadeInUp'
             style={{flex: 1, backgroundColor: colors.secondary, borderTopLeftRadius: 69, borderTopRightRadius: 69, paddingVertical: 50, paddingHorizontal: 10}}>
             <View style={{flex: 1, paddingHorizontal: 20,}}>
             <View style={{ justifyContent: 'center', alignItems: 'center', paddingVertical: 40}}>
-            <Text style={{fontFamily: Fonts.OSB, fontSize: 20,}}>Waiting for OTP</Text>
+            <Text style={{fontSize: 20,}}>Waiting for OTP</Text>
             <View style={{ alignItems: 'center', width: '100%'}}>
-            <Text style={{fontFamily: Fonts.OSL, fontSize: 14, padding: 1.5,}}>Please wait while we fetch OTP from your device</Text>
+            <Text style={{fontSize: 14, padding: 1.5,}}>Please wait while we fetch OTP from your device</Text>
             </View>
             
             </View>
@@ -84,7 +83,7 @@ const PhoneOTP = ({navigation}) => {
             
             <TextInput style={{height: 0, width: 0,
                 borderBottomColor: '#FFFFFF',
-                flex:1, fontFamily: Fonts.OSB, fontSize: 20}}
+                flex:1, fontSize: 20}}
                 ref = {(input) => textInput = input}
                 keyboardType="number-pad"
                 underlineColorAndroid='transparent'
@@ -103,7 +102,7 @@ const PhoneOTP = ({navigation}) => {
                                 () => textInput.focus()
                             }
                         >
-                            <Text style = {{textAlign: 'center', fontSize: 16, fontFamily: Fonts.OSB}}>
+                            <Text style = {{textAlign: 'center', fontSize: 16,}}>
                                 {/* {internalVal && internalVal.length >= 0 ? internalVal[index] : ""} */}
                                 {internalVal[index]}
                             </Text>
@@ -113,9 +112,9 @@ const PhoneOTP = ({navigation}) => {
                 
             </View>
             <View style = {{width: 290, alignSelf: 'center', }}>
-                {enableResend === false && <Text style={{fontFamily: Fonts.OSR, marginTop: 7, color: 'red', alignSelf: 'flex-end'}}>ResendOTP({counter})</Text>}
+                {enableResend === false && <Text style={{marginTop: 7, color: 'red', alignSelf: 'flex-end'}}>ResendOTP({counter})</Text>}
                 {enableResend === true && <Animatable.View style = {{width: '100%'}} animation='fadeInRight'>                    
-                    <Text style={{fontFamily: Fonts.OSR, color: 'black', fontSize: 16, alignSelf: 'flex-end', color: colors.primary, marginTop: 7}} onPress = {onResendOTP}>Resend OTP</Text>
+                    <Text style={{color: 'black', fontSize: 16, alignSelf: 'flex-end', color: colors.primary, marginTop: 7}} onPress = {onResendOTP}>Resend OTP</Text>
                 </Animatable.View>
                 }
             </View>
@@ -124,7 +123,7 @@ const PhoneOTP = ({navigation}) => {
             <TouchableOpacity style={{width: '90%',alignSelf: 'center',height: 50,justifyContent: 'center' ,alignItems: "center",backgroundColor: colors.primary,borderRadius: 50}} onPress={() => navigation.navigate('SetPassword')}>
             <LinearGradient style={{width: '100%',height: 50, flexDirection: 'row', justifyContent: 'center', alignItems: 'center', borderRadius: 50,}}
                 colors = {[colors.primary,'lightgreen']}>
-            <Text style={{fontFamily: Fonts.OSeB, color: 'white', fontSize: 21}}>V E R I F Y</Text>
+            <Text style={{color: 'white', fontSize: 21}}>V E R I F Y</Text>
             </LinearGradient>
             </TouchableOpacity>
             </View>

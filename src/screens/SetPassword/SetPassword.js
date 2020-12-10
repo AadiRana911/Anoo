@@ -5,7 +5,6 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import Feather from 'react-native-vector-icons/Feather';
 import * as Animatable from 'react-native-animatable';
 import { colors } from '../../theme';
-import {Fonts} from '../../utils/Fonts';
 
 const SetPassword = ({navigation}) => {
     const {height} = Dimensions.get("screen");
@@ -18,14 +17,14 @@ const SetPassword = ({navigation}) => {
     return (
         <View style={styles.container}>
            <View style={{flex: 0.5, justifyContent: 'center', alignItems: 'center', backgroundColor: colors.primary}}>
-                { <Text style={{fontFamily: Fonts.OSB, fontSize: 30, color: 'white'}}>Set Password</Text> }
+                { <Text style={{fontSize: 30, color: 'white'}}>Set Password</Text> }
             </View>
             <Animatable.View animation='fadeInUp'
             style={{flex: 1, backgroundColor: colors.secondary, borderTopLeftRadius: 69, borderTopRightRadius: 69, paddingVertical: 50, paddingHorizontal: 10}}>
             <View style={{flex: 1, paddingHorizontal: 20,}}>
             <View style={{ justifyContent: 'center', alignItems: 'center', }}>
-            <Text style={{fontFamily: Fonts.OSB, fontSize: 20, paddingBottom: 25}}>Just a few steps way</Text>
-            <Text style={{fontFamily: Fonts.OSL, fontSize: 10, paddingBottom: 5 }}>Your password must contain a special character, a number and atleast 8 digits.</Text>
+            <Text style={{fontSize: 20, paddingBottom: 25}}>Just a few steps way</Text>
+            <Text style={{fontSize: 10, paddingBottom: 5 }}>Your password must contain a special character, a number and atleast 8 digits.</Text>
             </View>
 
             <View style={{padding: 10,
@@ -48,7 +47,7 @@ const SetPassword = ({navigation}) => {
                     style={{height: 50,
                     marginLeft:16,
                     borderBottomColor: '#FFFFFF',
-                    flex:1, fontFamily: Fonts.OSR}}
+                    flex:1, }}
                     placeholder = {'Password'}
                     secureTextEntry = {secureTextEntry}
                     placeholderTextColor = {'gray'}
@@ -87,7 +86,7 @@ const SetPassword = ({navigation}) => {
                     style={{height: 50,
                     marginLeft:16,
                     borderBottomColor: '#FFFFFF',
-                    flex:1, fontFamily: Fonts.OSR}}
+                    flex:1, }}
                     placeholder = {'Re-enter Password'}
                     secureTextEntry = {reSecureTextEntry}
                     placeholderTextColor = {'gray'}
@@ -111,7 +110,7 @@ const SetPassword = ({navigation}) => {
             <TouchableOpacity style={{width: '80%',alignSelf: 'center',height: 50,justifyContent: 'center' ,alignItems: "center",backgroundColor: colors.primary,borderRadius: 50}} onPress={() => navigation.navigate('Industry')}>
             <LinearGradient style={{width: '100%',height: 50, flexDirection: 'row', justifyContent: 'center', alignItems: 'center', borderRadius: 50,}}
                 colors = {[colors.primary,'lightgreen']}>
-            <Text style={{fontFamily: Fonts.OSeB, color: 'white', fontSize: 21}}>C O N F I R M</Text>
+            <Text style={{color: 'white', fontSize: 21}}>C O N F I R M</Text>
             </LinearGradient>
             </TouchableOpacity>
             </View>

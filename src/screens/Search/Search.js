@@ -5,7 +5,6 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import * as Animatable from 'react-native-animatable';
 import Card from '../../components/Card/Card';
 import {colors} from '../../theme';
-import {Fonts} from '../../utils/Fonts';
 import Brands from '../../components/List/Brands';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
@@ -103,7 +102,7 @@ const Search = () => {
                 <TextInput style={{height: 50,
                     marginLeft:16,
                     borderBottomColor: '#FFFFFF',
-                    flex:1, fontFamily: Fonts.OSR}}
+                    flex:1}}
                     placeholder="Search for brands"
                     underlineColorAndroid='transparent'
                 />
@@ -170,13 +169,13 @@ const styles = StyleSheet.create({
     title: {
         color: colors.headingColor,
         fontSize: 30,
-        fontFamily: Fonts.OSsBi
+        
     },
     text: {
         color: 'grey',
         paddingHorizontal: 10,
         paddingBottom: 10,
-        fontFamily: Fonts.OSsBi
+        
     },
     item: {
         padding: 20,
@@ -193,7 +192,7 @@ const styles = StyleSheet.create({
     },
     textSign: {
         color: 'white',
-        fontFamily: Fonts.OSB
+        
     },
     button: {
         alignItems: 'flex-end',

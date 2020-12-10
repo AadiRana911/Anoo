@@ -7,7 +7,6 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import * as Animatable from 'react-native-animatable';
 import Card from '../../components/Card/Card';
 import {colors} from '../../theme';
-import {Fonts} from '../../utils/Fonts';
 import Brands from '../../components/List/Brands';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
@@ -83,7 +82,7 @@ const Chat = () => {
                 containerStyle={{height: 100, paddingHorizontal: 10, borderRadius: 5}}
                 backgroundColor = {colors.primary}
                 leftComponent={<Image source={require('../../assets/dev-jane-01.jpg')} style={{height: height/15, width: width/8, borderRadius: 50}}></Image>}
-                centerComponent = {<Text style = {{color: 'white', fontFamily: Fonts.OSeB, fontSize: 22}}>Chats</Text>}
+                centerComponent = {<Text style = {{color: 'white', fontSize: 22}}>Chats</Text>}
             />
             <View style = {{flex: 1}}>
             <View style={{padding: 10,
@@ -105,7 +104,7 @@ const Chat = () => {
                 <TextInput style={{height: 50,
                     marginLeft:16,
                     borderBottomColor: '#FFFFFF',
-                    flex:1, fontFamily: Fonts.OSR}}
+                    flex:1}}
                     placeholder="Search for contact"
                     underlineColorAndroid='transparent'
                 />

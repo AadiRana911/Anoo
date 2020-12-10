@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import { View, Text, FlatList } from 'react-native'
-import {Fonts} from '../../utils/Fonts'
 import {Header, Divider} from 'react-native-elements';
 import {colors} from '../../theme'
 import HomeItem from '../../components/HomeItem'
@@ -93,7 +92,7 @@ const Home = () => {
         <View style = {{flex: 1, paddingBottom: 10, backgroundColor: 'rgba(200, 200, 200, 0.6)'}}>
             <Header
                 backgroundColor = {colors.primary}
-                centerComponent = {<Text style = {{color: 'white', fontFamily: Fonts.OSeB, fontSize: 22}}>Topics</Text>}
+                centerComponent = {<Text style = {{color: 'white', fontSize: 22}}>Topics</Text>}
             />
             <View style = {{flex: 1}}>
                 <FlatList 
